@@ -10,5 +10,7 @@ Dieses Verzeichnis ist Sicherung und Historie. Wirksam ist die im Konto gespeich
 | `git-codex` | Repository, Branches, Commits, Review |
 | `python-codex` | Codequalität für Python |
 | `sprach-codex` | Codex für Sprachen ohne eigenen Codex |
+| `r-codex` | Codequalität für R |
+| `matlab-codex` | Codequalität für MATLAB |
 
 Die Übersicht, wann welcher Skill greift, steht in Obsidian: `TechStack/Skill-Index.md`.
