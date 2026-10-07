@@ -15,7 +15,7 @@ Vorgaben der Betreuung zu Zitierstil, Umfang und Zahl der Quellen gehen diesem C
 
 Der Agent entwirft vollständig: Suchstrategie, Quellenliste, Exzerpte, Literaturverzeichnis. Enzo prüft und verantwortet, was er abgibt. Vier Regeln verhindern, dass eine falsche Quelle in eine Abgabe gelangt:
 
-1. **Keine Quelle ohne Beleg.** Eine Quelle wird nur mit einem Link oder Digital Object Identifier genannt, den der Agent in dieser Sitzung geöffnet hat. Titel, Autoren und Jahr stammen von der geöffneten Seite, nie aus dem Gedächtnis. Was sich nicht öffnen lässt, trägt den Vermerk „ungeprüft“.
+1. **Keine Quelle ohne Beleg.** Eine Quelle wird nur mit einem Link oder Digital Object Identifier genannt, den der Agent in dieser Sitzung geöffnet hat. Titel, Autoren und Jahr stammen von der geöffneten Seite, nie aus dem Gedächtnis. Zeigt die Seite eine Angabe nicht, bleibt sie leer und wird als Lücke benannt. Der Beleg ist der geöffnete Link. Ein Digital Object Identifier, der nur von der Seite abgeschrieben und nicht selbst aufgelöst wurde, trägt den Vermerk „übernommen“. Was sich nicht öffnen lässt, trägt den Vermerk „ungeprüft“.
 2. **Bestätigung durch Enzo.** Jede Quelle beginnt als Kandidat. In das Literaturverzeichnis und in einen Textentwurf kommt sie erst nach Enzos ausdrücklicher Bestätigung.
 3. **Lesestatus.** Je Quelle steht, wie weit sie gelesen ist: `Zusammenfassung`, `Agent gelesen` oder `Enzo gelesen`. In das Verzeichnis einer Abgabe gehört nur, was Enzo selbst gelesen hat.
 4. **Nutzungsprotokoll.** Am Ende jeder Sitzung kommt eine Zeile in das Protokoll der Arbeit: Datum, Aufgabe, Werkzeug. So lässt sich der Einsatz des Agenten offenlegen.
@@ -27,7 +27,7 @@ Der Agent entwirft vollständig: Suchstrategie, Quellenliste, Exzerpte, Literatu
 | 1 Forschungsfrage schärfen | eine Frage, die alle sieben Kriterien erfüllt |
 | 2 Suchstrategie aufbauen | Suchbegriffe, Datenbanken, Suchausdrücke |
 | 3 Suchen und sichten | Suchprotokoll, Kandidaten mit Beleg |
-| 4 Bewerten | Bewertung je Kandidat, Vorschlag zur Bestätigung. Danach auf Enzos Bestätigung warten |
+| 4 Bewerten | Bewertung und Empfehlung je Kandidat. Danach auf Enzos Entscheidung warten |
 | 5 Lesen und exzerpieren | Exzerpt je bestätigter Quelle |
 | 6 Verzeichnis erstellen | Literaturverzeichnis im gewählten Stil |
 
@@ -69,7 +69,7 @@ Vorgehen:
 
 1. Kernbegriffe aus der Forschungsfrage ziehen. Je Begriff Synonyme sammeln, auf Deutsch und auf Englisch. Gesucht wird immer auch auf Englisch.
 2. Begriffe verknüpfen: Synonyme mit `OR`, verschiedene Kernbegriffe mit `AND`, feste Wortfolgen in Anführungszeichen, offene Wortenden mit `*`. Beispiel: `("dairy cow*" OR cattle) AND (LoRaWAN OR "Bluetooth Low Energy") AND "battery life"`.
-3. Suchprotokoll führen: Datum, Datenbank, Suchausdruck, Zahl der Treffer, übernommene Kandidaten. Das Protokoll liefert später die Beschreibung der Methode.
+3. Suchprotokoll führen: Datum, Datenbank oder Werkzeug, Suchausdruck, Zahl der Treffer, übernommene Kandidaten. Eine Websuche nennt keine Gesamtzahl, dann steht die Zahl der angezeigten Treffer mit diesem Hinweis. Das Protokoll liefert später die Beschreibung der Methode.
 4. Von guten Quellen aus weitersuchen: ihr Literaturverzeichnis durchsehen.
 
 ## Volltext beschaffen
@@ -128,11 +128,11 @@ Ein Exzerpt des Agenten ersetzt Enzos Lektüre nicht. Es zeigt ihm, wo er lesen 
 
 Die Quellenliste ist das Arbeitsdokument, aus dem das Verzeichnis entsteht.
 
-| Kurzbeleg mit Link | Art und Bewertung | Status | Lesestatus |
+| Kurzbeleg mit Link | Art, Bewertung, Empfehlung | Status | Lesestatus |
 |---|---|---|---|
-| Autor, Jahr, Titel, Link oder Digital Object Identifier | Quellenart, ein Satz | Kandidat | Zusammenfassung |
+| Autor, Jahr, Titel, Link oder Digital Object Identifier | Quellenart, ein Satz, aufnehmen oder verwerfen | Kandidat | Zusammenfassung |
 
-- Status ist `Kandidat`, `bestätigt` oder `verworfen`. Bestätigt wird nur durch Enzos ausdrückliche Antwort.
+- Status ist `Kandidat`, `bestätigt` oder `verworfen`. Der Agent gibt je Kandidat eine Empfehlung ab. Bestätigt und verworfen wird nur durch Enzos ausdrückliche Antwort.
 - Verworfene Quellen bleiben mit Grund in der Liste, damit sie nicht erneut vorgeschlagen werden.
 - Richtwert ohne Vorgabe der Betreuung: zehn bis 25 Quellen für eine Seminararbeit. Im Seminar aus Smart Farming mindestens zehn, davon mindestens drei aus Fachbüchern oder wissenschaftlichen Zeitschriften.
 
@@ -176,7 +176,7 @@ Vor der Übergabe an Enzo:
 - [ ] Jede Quelle hat Status und Lesestatus. Im Verzeichnis stehen nur bestätigte Quellen.
 - [ ] Mindestmenge und Anteil an Fachliteratur sind erreicht, oder die Lücke ist benannt.
 - [ ] Alle Einträge folgen demselben Stil und enthalten die Pflichtangaben.
-- [ ] Offene Punkte stehen an erster Stelle der Übergabe: ungeprüfte Quellen, fehlende Volltexte, unsichere Angaben.
+- [ ] Offene Punkte stehen an erster Stelle der Übergabe: ungeprüfte Quellen, fehlende Volltexte, fehlende Angaben, übernommene Digital Object Identifier.
 - [ ] Suchprotokoll und Nutzungsprotokoll sind vollständig.
 
 ## Herkunft der Regeln
@@ -194,4 +194,4 @@ Vor der Übergabe an Enzo:
 | Quellenliste: Richtwerte | Teil 2 Folie 38, Seminar 1 Folie 6 |
 | Literaturverzeichnis: Stilwahl, Pflichtangaben | Teil 1 Folien 23 und 31 bis 34 |
 | Literaturverzeichnis: Muster IEEE, Schreibweise im Text | extern: [IEEE Reference Guide](https://journals.ieeeauthorcenter.ieee.org/wp-content/uploads/sites/7/IEEE_Reference_Guide.pdf), Fassung 3.28.2025 |
-| Beleg, Bestätigung, Lesestatus, Nutzungsprotokoll, Suchprotokoll, Felder des Exzerpts, frei zugängliche Fassung, Anfrage bei den Autoren, Arbeiten ohne Websuche | Festlegung im Projekt Wissenschaft-Codex, ohne externe Quelle |
+| Beleg, Bestätigung, Empfehlung, Lesestatus, Nutzungsprotokoll, Suchprotokoll, Felder des Exzerpts, frei zugängliche Fassung, Anfrage bei den Autoren, Arbeiten ohne Websuche | Festlegung im Projekt Wissenschaft-Codex, ohne externe Quelle |
