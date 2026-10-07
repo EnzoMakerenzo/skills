@@ -40,7 +40,7 @@ Das Wiki ist ein Arbeitsmittel und kein Beleg. Zitiert wird in jeder Arbeit die 
 | `log.md` | je Vorgang ein Eintrag `## [JJJJ-MM-TT] aufnahme \| <Kurzbeleg>`, ebenso `abfrage`, `pruefung`, `bestaetigung` | jedem Vorgang |
 | `quellenliste.md` | Tabelle: Datei, Kurzbeleg, Status, Lesestatus, aufgenommen am | Bestätigung und Aufnahme |
 
-Dateinamen sind klein geschrieben, ohne Umlaute und Leerzeichen. Eine Quellenseite heißt `<erstautor>-<jahr>-<stichwort>.md`. Die Sprache der Seiten legt Enzo beim Anlegen fest. Fachbegriffe stehen beim ersten Auftreten zusätzlich in der Sprache der Quelle.
+Dateinamen sind klein geschrieben, ohne Umlaute und Leerzeichen. Eine Quellenseite heißt `<erstautor>-<jahr>-<stichwort>.md`. Die Sprache der Seiten legt Enzo beim Anlegen fest, siehe „Sprache“.
 
 ## Bestandsprüfung beim Start
 
@@ -88,6 +88,7 @@ erzeugt_von: agent
 erstellt: JJJJ-MM-TT
 geaendert: JJJJ-MM-TT
 quellen: [<Namen der Quellenseiten>]
+aliases: [<nur Begriffsseiten: der Begriff in der Sprache der Quelle>]
 ---
 ```
 
@@ -112,6 +113,21 @@ Form des Belegs: `([[quellen/<name>]], S. 12)`. Fehlt die Seitenzahl, weil die Q
 - Zahlen stehen nie ohne Einheit und Bedingung, also Messgröße, Material, Bereich.
 - Wörtlich übernommen wird höchstens ein Satz je Quelle, in Anführungszeichen und mit Seite. Abbildungen und Tabellen werden beschrieben, nicht kopiert.
 - Angaben zu Autoren, Jahr und Titel stammen aus der Datei selbst, nie aus dem Gedächtnis.
+
+## Sprache
+
+Weicht die Sprache des Wikis von der Sprache der Quellen ab, gilt:
+
+| Element | Sprache |
+|---|---|
+| Fließtext der Seiten, Dateinamen der Begriffsseiten | Sprache des Wikis |
+| Fachbegriff | Sprache des Wikis, beim ersten Auftreten je Seite das Original in Klammern |
+| Titel, Autoren, wörtliche Zitate, Formelzeichen, Einheiten | Original, unverändert |
+
+- Jede Begriffsseite führt den Begriff in der Sprache der Quelle unter `aliases`, damit Suche und Wikilinks in beiden Sprachen treffen.
+- Übersetzt wird ein Fachbegriff nur, wenn die Entsprechung in einer bestätigten Quelle oder einem Lehrbuch steht. Die Fundstelle steht auf der Begriffsseite. Fehlt sie, bleibt der Begriff im Original. Der Agent erfindet keine Übersetzung.
+- Verwenden Quellen für dieselbe Sache verschiedene Begriffe, stehen alle unter `aliases` und in der Definition.
+- Fragen beantwortet der Agent in der Sprache der Frage, die Belege bleiben gleich.
 
 ## Abfragen
 
@@ -168,4 +184,4 @@ Vor jeder Übergabe an Enzo:
 | Drei Ebenen, unveränderliche Rohquellen, Vorgänge Aufnehmen, Abfragen, Prüfen, `index.md` und `log.md`, gespeicherte Antworten | extern: [LLM Wiki](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f), Andrej Karpathy, 2026-04-04, Revision 1 |
 | Status `bestätigt`, Lesestatus, Felder der Quellenseite | `literatur-codex` |
 | Zitieren der Rohquelle statt der Wiki-Seite | `schreib-codex` |
-| Bestandsprüfung, sieben Prüfvorgaben, Belegpflicht mit Seite, Vermerk `unbelegt`, Schreiben nur im Wiki-Ordner, `quellenliste.md`, Ordner und Dateinamen, Grenze für wörtliche Übernahmen, Arbeiten mit lokalen Modellen | Festlegung im Projekt KarpathyLLM, ohne externe Quelle |
+| Bestandsprüfung, sieben Prüfvorgaben, Belegpflicht mit Seite, Vermerk `unbelegt`, Schreiben nur im Wiki-Ordner, `quellenliste.md`, Ordner und Dateinamen, Grenze für wörtliche Übernahmen, Sprache und `aliases`, Arbeiten mit lokalen Modellen | Festlegung im Projekt KarpathyLLM, ohne externe Quelle |
