@@ -13,6 +13,7 @@ Dieses Verzeichnis ist Sicherung und Historie. Wirksam ist die im Konto gespeich
 | `r-codex` | Codequalität für R |
 | `matlab-codex` | Codequalität für MATLAB |
 | `literatur-codex` | Forschungsfrage, Literatursuche, Bewertung von Quellen, Exzerpt, Literaturverzeichnis |
+| `schreib-codex` | Aufbau, Schreibstil, Quellenangaben im Text, Abbildungen, Formeln, Schlussprüfung wissenschaftlicher Texte |
 
 Die Übersicht, wann welcher Skill greift, steht in Obsidian: `TechStack/Skill-Index.md`.
 
