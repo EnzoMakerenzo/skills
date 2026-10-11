@@ -12,6 +12,7 @@ Dieses Verzeichnis ist Sicherung und Historie. Wirksam ist die im Konto gespeich
 | `sprach-codex` | Codex für Sprachen ohne eigenen Codex |
 | `r-codex` | Codequalität für R |
 | `matlab-codex` | Codequalität für MATLAB |
+| `bash-codex` | Codequalität für Bash |
 | `literatur-codex` | Forschungsfrage, Literatursuche, Bewertung von Quellen, Exzerpt, Literaturverzeichnis |
 | `schreib-codex` | Aufbau, Schreibstil, Quellenangaben im Text, Abbildungen, Formeln, Schlussprüfung wissenschaftlicher Texte |
 | `wiki-codex` | Themen-Wiki aus bestätigten Rohquellen: Bestandsprüfung, Aufnehmen, Abfragen, Prüfen |
