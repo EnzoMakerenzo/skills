@@ -13,6 +13,17 @@ Vorhandene Konventionen eines bestehenden Projekts haben Vorrang vor diesem Code
 
 Bash ist die richtige Wahl für das Verketten von Programmen und für Startskripte. Braucht ein Skript Datenstrukturen, Rechnen mit Kommazahlen oder mehr als etwa 200 Zeilen, wird es in Python geschrieben.
 
+## Einfachheit zuerst
+
+Diese Regeln gehen allen anderen Abschnitten vor.
+
+- Die einfachste Lösung, die die Anforderung erfüllt, wird gewählt. Einfach heißt leicht zu lesen, nicht möglichst kurz.
+- Nichts auf Vorrat: Eine Abstraktion, Basisklasse, Konfigurationsmöglichkeit oder Erweiterbarkeit entsteht erst beim zweiten tatsächlichen Bedarf.
+- Zwischen zwei gleichwertigen Lösungen gewinnt die mit weniger Code, weniger Dateien und weniger Abhängigkeiten.
+- Eingebaute Mittel der Bash und Grundprogramme zuerst. Kein `awk`- oder `sed`-Programm über eine Zeile, stattdessen eine benannte Funktion oder Python.
+- Keine eigenen Rahmenwerke für Optionen, Protokollierung oder Farben. Ein einfaches `case` über die Argumente genügt.
+- Ein Skript, das als Datei unter etwa 100 Zeilen bleibt, bekommt keine eigene Bibliothek.
+
 ## Werkzeuge
 
 | Aufgabe | Werkzeug | Aufruf |
@@ -184,7 +195,7 @@ Schlägt eine Prüfung fehl oder konnte sie nicht laufen, steht das in der erste
 | [ShellCheck Wiki](https://www.shellcheck.net/wiki/) | Verbot von `eval` und Auswerten von `ls`, getrennte Deklaration bei `local`, zeilenweises Abschalten mit Grund |
 | [GNU Bash Reference Manual](https://www.gnu.org/software/bash/manual/) | `set -euo pipefail`, `trap`, Parametererweiterung mit Vorgabe und Pflichtwert |
 | [bats-core Dokumentation](https://bats-core.readthedocs.io/) | Aufbau und Aufruf der Tests |
-| `sprach-codex`, gemeinsame Grundsätze | Richtwerte für Funktionen, Fehlermeldungen, Pflichtfälle der Tests, Abschlussprüfung |
+| `sprach-codex`, gemeinsame Grundsätze | Einfachheit zuerst, Richtwerte für Funktionen, Fehlermeldungen, Pflichtfälle der Tests, Abschlussprüfung |
 | Ergänzung für Enzos Umgebung | Bash 3.2 unter macOS, Verbot von `sudo` im Skript, Ersatzprogramme für `docker` in Tests |
 
 Stand der Werkzeuge beim Entwurf am 2026-10-11: shfmt 3.13, bats-core 1.14. Die Versionen sind vor der ersten Verwendung am Zielsystem zu prüfen.

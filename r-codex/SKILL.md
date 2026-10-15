@@ -11,6 +11,18 @@ Auswertungen in R werden oft einmal geschrieben und Jahre später wieder gebrauc
 
 Vorhandene Konventionen eines bestehenden Projekts haben Vorrang vor diesem Codex. Für das Vorgehen vor dem ersten Code gilt `projekt-codex`, für die Versionsverwaltung `git-codex`.
 
+## Einfachheit zuerst
+
+Diese Regeln gehen allen anderen Abschnitten vor.
+
+- Die einfachste Lösung, die die Anforderung erfüllt, wird gewählt. Einfach heißt leicht zu lesen, nicht möglichst kurz.
+- Nichts auf Vorrat: Eine Abstraktion, Basisklasse, Konfigurationsmöglichkeit oder Erweiterbarkeit entsteht erst beim zweiten tatsächlichen Bedarf.
+- Zwischen zwei gleichwertigen Lösungen gewinnt die mit weniger Code, weniger Dateien und weniger Abhängigkeiten.
+- Basis-R und eine verbreitete Tidyverse-Funktion zuerst. Eigene S4- oder R6-Klassen nur mit Begründung im Entwurf.
+- Keine nicht standardmäßige Auswertung (Tidy Evaluation, `substitute`) in eigenen Funktionen ohne Begründung.
+- Eine Pipe-Kette hat höchstens etwa 8 Schritte. Längere Ketten werden in benannte Zwischenergebnisse geteilt.
+- Eine Auswertung, die in ein Skript passt, wird nicht zum Paket.
+
 ## Werkzeuge
 
 | Aufgabe | Werkzeug | Aufruf |
@@ -186,5 +198,5 @@ Werkzeuge und Konfiguration wurden am 2026-10-05 nachgeschlagen.
 | Dokumentation von Air (Posit) | Aufrufe, Standardwerte der Formatierung |
 | Dokumentation von lintr 3.4.0 | Aufbau der Datei `.lintr`, Prüfregeln |
 | Dokumentation von testthat und renv | Tests, festgeschriebene Versionen |
-| `sprach-codex`, gemeinsame Grundsätze | Grenzwerte, Trennung von Berechnung und Ein-/Ausgabe, Fehlerbehandlung, Abschlussprüfung |
+| `sprach-codex`, gemeinsame Grundsätze | Einfachheit zuerst, Grenzwerte, Trennung von Berechnung und Ein-/Ausgabe, Fehlerbehandlung, Abschlussprüfung |
 | Ergänzung für Messdaten | Einheiten im Namen, Dezimalkomma, Zeitzone, Koordinatenbezugssystem |
