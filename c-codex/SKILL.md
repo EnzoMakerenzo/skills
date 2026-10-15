@@ -11,6 +11,18 @@ C auf einem Mikrocontroller verzeiht wenig: Ein Speicherfehler stürzt nicht ab,
 
 Rangfolge bei Widerspruch: Konventionen des bestehenden Projekts, dann die ESP-IDF-Stilrichtlinie, dann dieser Codex, dann BARR-C:2018. Für das Vorgehen vor dem ersten Code gilt `projekt-codex`, für Git `git-codex`. Einen Fach-Skill für ESP32 gibt es derzeit nicht; Plattformdetails kommen aus der ESP-IDF-Dokumentation der verwendeten Version.
 
+## Einfachheit zuerst
+
+Diese Regeln gehen allen anderen Abschnitten vor.
+
+- Die einfachste Lösung, die die Anforderung erfüllt, wird gewählt. Einfach heißt leicht zu lesen, nicht möglichst kurz.
+- Nichts auf Vorrat: Eine Abstraktion, Basisklasse, Konfigurationsmöglichkeit oder Erweiterbarkeit entsteht erst beim zweiten tatsächlichen Bedarf.
+- Zwischen zwei gleichwertigen Lösungen gewinnt die mit weniger Code, weniger Dateien und weniger Abhängigkeiten.
+- Keine Funktionszeigertabellen oder Rückruffunktionen, solange es nur eine Umsetzung gibt.
+- Funktionsartige Makros nur, wo eine `static inline`-Funktion nicht möglich ist. Keine Makrotricks zur Codeerzeugung.
+- Eine eigene FreeRTOS-Aufgabe nur, wenn eigene Periode oder Priorität nötig ist. Sonst läuft der Schritt in einer bestehenden Aufgabe.
+- Eine Hardwareschicht je Gerät, keine weitere Abstraktionsebene über dem ESP-IDF-Treiber.
+
 ## Werkzeuge
 
 | Aufgabe | Werkzeug | Aufruf |
@@ -179,5 +191,5 @@ Schlägt eine Prüfung fehl oder konnte sie nicht laufen, steht das in der erste
 | Fehlermodell, `esp_check.h`, Logging | ESP-IDF Programming Guide, Error Handling und Logging |
 | Statische Prüfung | PlatformIO-Dokumentation, Static Code Analysis (`check_*`-Optionen) |
 | Klammern, `volatile`, ISR-Namen, feste Breiten, `default`, Vorzeichenmischung, Gleitkommavergleich, `static` | BARR-C:2018, Regeln 1.3.a, 1.7.c, 1.8.a, 1.8.c, 5.2.a, 5.3.c, 5.4.b, 6.5.b, 8.3.b |
-| Grenzwerte, Trennung Rechnen und Ein-/Ausgabe | gemeinsame Grundsätze aus `sprach-codex` |
+| Einfachheit zuerst, Grenzwerte, Trennung Rechnen und Ein-/Ausgabe | gemeinsame Grundsätze aus `sprach-codex` |
 | Kein dynamischer Speicher nach dem Start, FreeRTOS-Regeln | FreeRTOS-Dokumentation zu statischer Allokation; Wissensstand des Assistenten, zu prüfen |
