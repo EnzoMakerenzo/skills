@@ -11,6 +11,18 @@ Berechnungen in MATLAB entstehen oft als schnelles Skript und werden dann weiter
 
 Vorhandene Konventionen eines bestehenden Projekts haben Vorrang vor diesem Codex. Für das Vorgehen vor dem ersten Code gilt `projekt-codex`, für die Versionsverwaltung `git-codex`.
 
+## Einfachheit zuerst
+
+Diese Regeln gehen allen anderen Abschnitten vor.
+
+- Die einfachste Lösung, die die Anforderung erfüllt, wird gewählt. Einfach heißt leicht zu lesen, nicht möglichst kurz.
+- Nichts auf Vorrat: Eine Abstraktion, Basisklasse, Konfigurationsmöglichkeit oder Erweiterbarkeit entsteht erst beim zweiten tatsächlichen Bedarf.
+- Zwischen zwei gleichwertigen Lösungen gewinnt die mit weniger Code, weniger Dateien und weniger Abhängigkeiten.
+- Funktionen und Tabellen (`table`, `timetable`) zuerst. Klassen mit `classdef` nur, wenn Daten und Verhalten zusammengehören und das im Entwurf begründet ist.
+- Vektorisierung, wo sie lesbar bleibt. Ist eine Schleife leichter zu verstehen, gewinnt die Schleife.
+- Keine Toolbox für eine Aufgabe, die Basis-MATLAB in wenigen Zeilen löst.
+- Eine Berechnung, die in eine Datei passt, wird nicht auf mehrere verteilt.
+
 ## Werkzeuge
 
 | Aufgabe | Werkzeug | Aufruf |
@@ -193,5 +205,5 @@ Werkzeuge und Konfiguration wurden am 2026-10-05 nachgeschlagen. Die Angabe zur 
 |---|---|
 | MATLAB Coding Standards von MathWorks (Repository `matlab/rules`) | Benennung, Länge der Namen, `arguments`-Block, Formatierung, Kommentare, Fehlerbehandlung, zu vermeidende Funktionen |
 | Dokumentation von MathWorks zum Build Tool | `buildfile.m`, `CodeIssuesTask`, `TestTask`, Aufruf `buildtool` |
-| `sprach-codex`, gemeinsame Grundsätze | Grenzwerte, Trennung von Berechnung und Ein-/Ausgabe, Abschlussprüfung |
+| `sprach-codex`, gemeinsame Grundsätze | Einfachheit zuerst, Grenzwerte, Trennung von Berechnung und Ein-/Ausgabe, Abschlussprüfung |
 | Ergänzung für Messdaten | Einheiten im Namen, Dezimalkomma, Zeitzone, Toleranz bei Gleitkommazahlen |

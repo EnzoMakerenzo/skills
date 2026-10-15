@@ -11,6 +11,18 @@ Code wird öfter gelesen als geschrieben. Die Regeln zielen darauf, dass Enzo od
 
 Vorhandene Konventionen eines bestehenden Projekts haben Vorrang vor diesem Codex. Für das Vorgehen vor dem ersten Code gilt `projekt-codex`.
 
+## Einfachheit zuerst
+
+Diese Regeln gehen allen anderen Abschnitten vor.
+
+- Die einfachste Lösung, die die Anforderung erfüllt, wird gewählt. Einfach heißt leicht zu lesen, nicht möglichst kurz.
+- Nichts auf Vorrat: Eine Abstraktion, Basisklasse, Konfigurationsmöglichkeit oder Erweiterbarkeit entsteht erst beim zweiten tatsächlichen Bedarf.
+- Zwischen zwei gleichwertigen Lösungen gewinnt die mit weniger Code, weniger Dateien und weniger Abhängigkeiten.
+- Funktionen und eingebaute Datentypen zuerst. Eine Klasse nur, wenn Daten und Verhalten zusammengehören; reine Datensätze als `dataclass`.
+- Keine Metaklassen, Dekoratoren für eigene Zwecke oder dynamisch erzeugte Attribute ohne Begründung im Entwurf.
+- Verschachtelte Comprehensions mit mehr als einer Bedingung werden zur Schleife.
+- Ein Skript, das in eine Datei passt, wird nicht in ein Paket mit mehreren Modulen zerlegt.
+
 ## Werkzeuge
 
 | Aufgabe | Werkzeug | Aufruf |
