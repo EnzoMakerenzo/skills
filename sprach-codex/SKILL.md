@@ -31,7 +31,10 @@ In keiner Sprache wird stillschweigend nach Gutdünken gearbeitet. Entweder gilt
 | Swift | `swift-codex` |
 | SQL | `sql-codex` |
 | Shell | `bash-codex` |
+| Angular (TypeScript, Vorlagen, Stile) | `angular-codex` |
 | andere | `<sprache>-codex`, kleingeschrieben, ohne Sonderzeichen |
+
+Ein Rahmenwerk mit eigener offizieller Stilrichtlinie und eigenen Werkzeugen, wie Angular, bekommt einen eigenen Codex. Er deckt die Sprache innerhalb des Rahmenwerks mit ab, ein getrennter Codex für die Sprache ist dann nicht nötig.
 
 ### Wann kein eigener Codex entsteht
 
@@ -42,6 +45,9 @@ In keiner Sprache wird stillschweigend nach Gutdünken gearbeitet. Entweder gilt
 
 Dieser Kern gilt in jeder Sprache. Jeder Codex übernimmt ihn und übersetzt ihn in die Mittel der Sprache.
 
+- Einfachheit zuerst: Die einfachste Lösung, die die Anforderung erfüllt, wird gewählt. Einfach heißt leicht zu lesen, nicht möglichst kurz. Diese Regel geht allen anderen vor.
+- Nichts auf Vorrat: Eine Abstraktion, Schnittstelle, Basisklasse oder Konfigurationsmöglichkeit entsteht erst beim zweiten tatsächlichen Bedarf.
+- Zwischen zwei gleichwertigen Lösungen gewinnt die mit weniger Code, weniger Dateien und weniger Abhängigkeiten.
 - Namen sagen, was ein Wert bedeutet. Physikalische Größen tragen die Einheit im Namen.
 - Eine Funktion erledigt eine Aufgabe. Richtwerte: höchstens 30 Anweisungen, höchstens 4 Parameter, Verschachtelung höchstens 3 Ebenen.
 - Keine booleschen Schalterparameter, die das Verhalten umschalten.
@@ -60,6 +66,7 @@ Dieser Kern gilt in jeder Sprache. Jeder Codex übernimmt ihn und übersetzt ihn
 | Abschnitt | Inhalt |
 |---|---|
 | Zweck | wofür die Regeln da sind, Vorrang bestehender Konventionen |
+| Einfachheit zuerst | wie die einfachste Lösung in dieser Sprache aussieht und welche Mittel nur mit Begründung erlaubt sind |
 | Werkzeuge | Formatierer, statische Prüfung, Warnungen des Übersetzers oder Typprüfung, Tests, je mit Aufruf und Grundkonfiguration |
 | Benennung | Schreibweisen der Sprache, Einheiten, Sprache der Bezeichner |
 | Funktionen | Grenzwerte, Parameter, Rückgaben |
