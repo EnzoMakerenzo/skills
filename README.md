@@ -21,6 +21,8 @@ Dieses Verzeichnis ist Sicherung und Historie. Wirksam ist die im Konto gespeich
 
 Die Übersicht, wann welcher Skill greift, steht in Obsidian: `TechStack/Skill-Index.md`.
 
+Übernommene Skills anderer Autoren (Design und Animation von Emil Kowalski, `impeccable`, `design-taste-frontend`) liegen unverändert mit ihren Lizenzen im Ordner [`extern`](extern/README.md).
+
 ## Skills in anderen Sprachmodellen verwenden
 
 Jeder Skill ist eine einzelne Markdown-Datei im offenen Format [Agent Skills](https://agentskills.io): oben ein Kopf mit `name` und `description`, darunter die Regeln als Text. Deshalb lässt er sich auch außerhalb von Claude verwenden. Der Weg hat drei Schritte: herunterladen, personalisieren, einfügen.
