@@ -108,7 +108,18 @@ Gibt es zu einem Vorhaben schon Code oder Unterlagen, ersetzt die Bestandsübern
 
 Ergebnis ist ein Konzept mit diesen Abschnitten:
 
-1. **Projektauftrag**: Ausgangslage, Problem, wer das Ergebnis nutzt.
+1. **Projektauftrag**: Ausgangslage, Problem, wer das Ergebnis nutzt. Pflichtteil ist die Zerlegung des Vorhabens in sechs Felder, als Tabelle am Anfang des Konzepts:
+
+   | Feld | Frage |
+   |---|---|
+   | Problem | Was ist heute falsch oder fehlt? |
+   | Ziel | Woran ist erkennbar, dass es gelöst ist? |
+   | Constraints | Welche Grenzen gelten: Zeit, Geld, Hardware, Recht, Daten? |
+   | Tools | Welche Sprachen, Programme und Geräte sind gesetzt oder ausgeschlossen? |
+   | Region | Für welchen Raum gelten Daten, Normen und Recht (Österreich, Europäische Union, andere)? |
+   | Timeline | Bis wann, mit welchen Zwischenterminen? |
+
+   Ein Feld ohne Angabe von Enzo wird als offene Frage geführt, nicht geraten. Die Zerlegung gilt nur in diesem Projektauftrag, nicht als Regel für jede Anfrage.
 2. **Ziele**: Hauptziele, Zusatzziele und ausdrücklich Nicht-Ziele. Nicht-Ziele verhindern, dass der Umfang während der Umsetzung wächst.
 3. **Abgrenzung und Kontext**: sachlich (was gehört dazu, was nicht), zeitlich (was war vorher, was kommt danach), sozial (wer ist beteiligt oder betroffen).
 4. **Umwelten**: angrenzende Systeme, Datenquellen, Formate, Personen, die den Code später warten.
@@ -155,7 +166,12 @@ Bei mindestens zwei tragfähigen Lösungswegen werden diese in einer Tabelle geg
 
 ```
 Größenklasse: Klein
+Problem: <ein Satz>
 Ziel: <ein Satz>
+Constraints: <Zeit, Hardware, Recht, Daten>
+Tools: <gesetzt oder ausgeschlossen>
+Region: <Geltungsraum, oder "nicht relevant">
+Timeline: <Termin>
 Nicht-Ziele: <was bewusst fehlt>
 Eingaben und Ausgaben: <Formate, Orte>
 Abnahmekriterien: <zwei bis vier prüfbare Aussagen>
