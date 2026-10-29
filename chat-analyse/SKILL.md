@@ -24,18 +24,36 @@ Welche Skills sich lohnen, zeigt der eigene Chatverlauf: Aufgaben, die immer wie
 |---|---|
 | `conversations.json` | Datenexport in den claude.ai-Einstellungen anfordern; der Link kommt per E-Mail; die Datei steckt in `conversations-000.zip`. Die Links gelten 24 Stunden und oft nur für einen Abruf. |
 | Python ab 3.10 | nur Standardbibliothek, keine Installation nötig |
-| Code | Ordner `chat-analyse/src` dieses Skills |
+| Code | Ordner `chat-analyse/src` im Repository `EnzoMakerenzo/skills`; fehlt er, wird er nach Schritt 0 geladen |
 | Ablageort des Berichts | von Enzo genannt; ohne Angabe einmal fragen |
 
 Projektzuordnung, Cowork-Sitzungen und Design-Chats stehen in anderen Dateien des Exports und sind nicht Teil der Auswertung.
 
 ## Ablauf
 
+### 0 Code bereitstellen
+
+Die im Konto gespeicherte Fassung dieses Skills enthält nur diese Datei, nicht das Skript. Deshalb zuerst den Code suchen, in dieser Reihenfolge:
+
+1. Neben dieser `SKILL.md` liegt ein Ordner `src/chat_analyse`: diesen nutzen.
+2. Ein verbundener Ordner enthält das Repository `skills` mit `chat-analyse/src/chat_analyse`: diesen nutzen.
+3. Sonst den Code aus dem öffentlichen Repository laden, in einen eigenen, leeren Ordner außerhalb jedes Git-Repositorys, zum Beispiel im Arbeits- oder Notizordner der Sitzung:
+
+```
+mkdir -p <arbeitsordner>/chat-analyse-code
+curl -sSL https://codeload.github.com/EnzoMakerenzo/skills/tar.gz/refs/heads/main \
+  | tar xz -C <arbeitsordner>/chat-analyse-code
+```
+
+Der Code liegt danach in `<arbeitsordner>/chat-analyse-code/skills-main/chat-analyse/src`. Gelingt der Abruf nicht (kein Netz, Adresse gesperrt), wird abgebrochen und gemeldet, welcher Abruf scheiterte; Zählungen werden nie ohne das Skript erstellt. Im Bericht steht, welcher der drei Wege genutzt wurde.
+
 ### 1 Skript ausführen
 
 ```
-PYTHONPATH=<skill-ordner>/src python3 -m chat_analyse <pfad>/conversations.json
+PYTHONPATH=<code-ordner>/src python3 -m chat_analyse <pfad>/conversations.json
 ```
+
+`<code-ordner>` ist der Ordner `chat-analyse` aus Schritt 0. Liegt der Export in einem Git-Repository, wird `--output-dir` auf einen Ordner außerhalb gesetzt; das Skript verweigert sonst die Ausgabe.
 
 Ohne `--output-dir` schreibt das Skript in den Ordner `auswertung` neben dem Export:
 
@@ -107,6 +125,7 @@ status: entwurf
 
 ## Datengrundlage
 <Prüfbericht des Skripts: Chats, Zeitraum, übersprungene Chats, Skill-Aufrufe, gelesene SKILL.md, Chats mit Skill-Nutzung>
+<Weg zum Code aus Schritt 0 und Stand (Commit oder Download von main mit Datum)>
 
 ## Skill-Nutzung
 | Skill | Nutzungen | Chats | installiert |
