@@ -1,0 +1,45 @@
+[
+  {
+    "uuid": "chat-a",
+    "name": "Python-Skript für Pegeldaten",
+    "summary": "Der Nutzer wollte ein Skript zum Einlesen von Pegeldaten.",
+    "created_at": "2026-01-15T08:00:00.000000Z",
+    "chat_messages": [
+      {"sender": "human", "text": "Schreib mir ein Skript für Pegeldaten", "content": [{"type": "text", "text": "Schreib mir ein Skript für Pegeldaten"}]},
+      {"sender": "assistant", "text": "", "content": [
+        {"type": "tool_use", "name": "Skill", "input": {"skill": "anthropic-skills:projekt-codex"}},
+        {"type": "tool_use", "name": "Skill", "input": {"skill": "python-codex"}},
+        {"type": "tool_use", "name": "Bash", "input": {"command": "ls"}},
+        {"type": "text", "text": "Fertig."}
+      ]}
+    ]
+  },
+  {
+    "uuid": "chat-b",
+    "name": "Word-Dokument",
+    "summary": "",
+    "created_at": "2026-02-03T10:30:00+01:00",
+    "chat_messages": [
+      {"sender": "human", "text": "Mach ein Word-Dokument", "content": []},
+      {"sender": "assistant", "text": "", "content": [
+        {"type": "tool_use", "name": "view", "input": {"path": "/mnt/skills/public/docx/SKILL.md"}},
+        {"type": "tool_use", "name": "Read", "input": {"file_path": "/root/.claude/skills/synced/abc/git-codex/SKILL.md"}},
+        {"type": "tool_use", "name": "Edit", "input": {"file_path": "/Users/x/Documents/Claude/skills/python-codex/SKILL.md"}},
+        {"type": "tool_use", "name": "Skill", "input": {"skill": "ESP32:esp32"}}
+      ]}
+    ]
+  },
+  {
+    "uuid": "chat-c",
+    "name": "",
+    "summary": "Plauderei ohne Werkzeuge.",
+    "created_at": "2026-02-20T12:00:00Z",
+    "chat_messages": [
+      {"sender": "human", "text": "Hallo", "content": [{"type": "text", "text": "Hallo"}]}
+    ]
+  },
+  "kein Objekt",
+  {"name": "ohne Kennung", "created_at": "2026-01-01T00:00:00Z", "chat_messages": [{}]},
+  {"uuid": "chat-zeit", "created_at": "2026-01-01T00:00:00", "chat_messages": [{}]},
+  {"uuid": "chat-leer", "created_at": "2026-01-01T00:00:00Z", "chat_messages": []}
+]

@@ -1,1 +1,11 @@
 .DS_Store
+
+# chat-analyse: Exporte und Auswertungen enthalten persönliche Chatinhalte
+conversations*.json
+*.zip
+auswertung/
+.venv/
+__pycache__/
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/

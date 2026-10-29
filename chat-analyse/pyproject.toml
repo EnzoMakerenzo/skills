@@ -1,0 +1,39 @@
+[project]
+name = "chat-analyse"
+version = "0.1.0"
+description = "Wertet einen claude.ai-Datenexport aus: Skill-Nutzung und Merkmale je Chat"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.scripts]
+chat-analyse = "chat_analyse.cli:main"
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+src = ["src"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "N", "SIM", "C90", "PL", "RUF", "D"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["D", "PLR2004"]
+
+[tool.ruff.lint.mccabe]
+max-complexity = 10
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.ruff.lint.pylint]
+max-args = 4
+max-statements = 30
+
+[tool.mypy]
+strict = true
+python_version = "3.10"
+mypy_path = "src"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
