@@ -18,6 +18,7 @@ Dieses Verzeichnis ist Sicherung und Historie. Wirksam ist die im Konto gespeich
 | `literatur-codex` | Forschungsfrage, Literatursuche, Bewertung von Quellen, Exzerpt, Literaturverzeichnis |
 | `schreib-codex` | Aufbau, Schreibstil, Quellenangaben im Text, Abbildungen, Formeln, Schlussprüfung wissenschaftlicher Texte |
 | `wiki-codex` | Themen-Wiki aus bestätigten Rohquellen: Bestandsprüfung, Aufnehmen, Abfragen, Prüfen |
+| `chat-analyse` | Chatverlauf aus dem claude.ai-Export auswerten und Skills vorschlagen, mit Python-Skript |
 
 Die Übersicht, wann welcher Skill greift, steht in Obsidian: `TechStack/Skill-Index.md`.
 
