@@ -15,6 +15,7 @@ Dieses Verzeichnis ist Sicherung und Historie. Wirksam ist die im Konto gespeich
 | `bash-codex` | Codequalität für Bash |
 | `c-codex` | Codequalität für C auf Mikrocontrollern (ESP32, ESP-IDF, FreeRTOS) |
 | `angular-codex` | Codequalität für Angular, mit Vorrang der einfachsten Lösung |
+| `javascript-codex` | Codequalität für JavaScript unter Node.js und in Code-Knoten von n8n |
 | `literatur-codex` | Forschungsfrage, Literatursuche, Bewertung von Quellen, Exzerpt, Literaturverzeichnis |
 | `schreib-codex` | Aufbau, Schreibstil, Quellenangaben im Text, Abbildungen, Formeln, Schlussprüfung wissenschaftlicher Texte |
 | `wiki-codex` | Themen-Wiki aus bestätigten Rohquellen: Bestandsprüfung, Aufnehmen, Abfragen, Prüfen |
