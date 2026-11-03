@@ -32,6 +32,7 @@ In keiner Sprache wird stillschweigend nach Gutdünken gearbeitet. Entweder gilt
 | SQL | `sql-codex` |
 | Shell | `bash-codex` |
 | Angular (TypeScript, Vorlagen, Stile) | `angular-codex` |
+| JavaScript (Node.js, Code-Knoten in n8n) | `javascript-codex` |
 | andere | `<sprache>-codex`, kleingeschrieben, ohne Sonderzeichen |
 
 Ein Rahmenwerk mit eigener offizieller Stilrichtlinie und eigenen Werkzeugen, wie Angular, bekommt einen eigenen Codex. Er deckt die Sprache innerhalb des Rahmenwerks mit ab, ein getrennter Codex für die Sprache ist dann nicht nötig.
